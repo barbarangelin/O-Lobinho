@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>O Lobinho</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imgs/icone.jpg') }}" type="image/png">
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Manufacturing+Consent&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="quadro">
+            <header class="barra-principal">
+                <nav>
+                    <ul class="seçoes">
+                        <li><a href="{{ url_for('home') }}">Pagina Inicial</a></li>
+                        <li><a href="{{ url_for('verificacao') }}">Verificar informação</a></li>
+                        <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="titulo">
+                <h1>O Lobinho</h1>
+                <p>O site que detecta a mentira</p>
+                <div class="quadro-secundario">
+                    <img id="icone" src="{{ url_for('static', filename='imgs/icone.jpg') }}">
+                    <h2>Concepção do projeto</h2>
+                    <p>Esse site foi feito para um trabalho universitário sobre a Ética na IA
+                        e os riscos de desinformação que a tecnologia pode estimular.
+                    </p>
+                    <p>Dessa forma, o site O lobinho mostra que, mesmo a IA causando problemas,
+                        ela também pode ser a solução caso manipulada de maneira correta.
+                    </p>
+                    <h2>Ferramentas utilizadas</h2>
+                    <p>O site foi criado com HTML e o CSS padrões. Contudo, para haver a conexão com o Python,
+                        foi escolhido o Flask para fazer uma 'ponte' entre o back end e o front end.
+                        Eu ponderei entre o Flask e o Django, mas no fim decidi o uso do Flask por sua simplicidade.
+                        Também utilizei a API do Gemini no plano gratuito.
+                    </p>
+                    <h2>O Teste Lobinho</h2>
+                    <p>O prompt do Gemini foi 'engessado' intencionalmente para evitar que as respostas
+                        divergissem entre si, ou seja, para forçar que as respostas seguissem procedimentos e regras 
+                        pré estabelecidas.
+                    </p>
+                    <p>Na função de definição de regras, as duas primeiras regras foram inspiradas pelo
+                        livro Eu Robo do Isaac Asimov. As regras restantes foram criadas diretamente por mim
+                        para indicar a abordagem que a IA deveria usar.
+                    </p>
+                    <p>Já na função de riscos foi designado as categorias de riscos, a descrição das categorias 
+                        e um exemplo para cada uma delas.
+                        Todas as categorias foram baseadas na pirâmide de risco do AI Act.
+                    </p>
+                    <img src="{{ url_for('static', filename='imgs/piramide de risco.jpg') }}">
+                    <p>
+                        A notícia também é classificada de acordo com a veracidade dela em sete categorias
+                        distintas. E, obviamente, a classificação é justificada com fundamentos concretos.
+                    </p>
+                    
+                </div>
+                <hr>
+            </div>
+            <div class="rodape">
+                <ul>
+                    <li id="GitHub"><a href="https://github.com/barbarangelin/O-Lobinho"><img src="{{ url_for('static', filename='imgs/git.png') }}" alt="GitHub"><h4>Barbara Angelin</h4></a></li>
+                    <li id="Facomp"><a href="https://www.facompcastanhal.ufpa.br/"><img src="{{ url_for('static', filename='imgs/facomp.png') }}" alt="Facomp"><h4 id="legendaFacomp">Facomp</h4></a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

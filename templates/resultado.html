@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>O Lobinho</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imgs/icone.jpg') }}" type="image/png">
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Manufacturing+Consent&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="quadro">
+            <header class="barra-principal">
+                <nav>
+                    <ul class="seçoes">
+                        <li><a href="{{ url_for('home') }}">Pagina Inicial</a></li>
+                        <li><a href="{{ url_for('verificacao') }}">Verificar informação</a></li>
+                        <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="titulo">
+                <h1>Teste Lobinho</h1>
+                <p>O teste que detecta se é mentira ou não a notícia</p>
+            </div>
+            <div class="resultado">
+                <h2>Aqui está o resultado do teste Lobinho</h2>
+                <h3>{{resultado_lobinho}}</h3>
+                <hr>
+            </div>
+            <div class="rodape">
+                <ul>
+                    <li id="GitHub"><a href="https://github.com/barbarangelin/O-Lobinho"><img src="{{ url_for('static', filename='imgs/git.png') }}" alt="GitHub"><h4>Barbara Angelin</h4></a></li>
+                    <li id="Facomp"><a href="https://www.facompcastanhal.ufpa.br/"><img src="{{ url_for('static', filename='imgs/facomp.png') }}" alt="Facomp"><h4 id="legendaFacomp">Facomp</h4></a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
